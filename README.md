@@ -3,9 +3,11 @@
 Move the files downloaded via qBittorrent automatically
 
 ## NOTE
-Must be enabled "Remote control" (Tools->Preferences->Web UI->Web User Interface)
-Must be enabled "Remote control" (Tools->Preferences->Web UI->Web User Interface)
-Must be enabled "Remote control" (Tools->Preferences->Web UI->Web User Interface)
+**Must be enabled "Remote control" (Tools->Preferences->Web UI->Web User Interface)**
+
+**Must be enabled "Remote control" (Tools->Preferences->Web UI->Web User Interface)**
+
+**Must be enabled "Remote control" (Tools->Preferences->Web UI->Web User Interface)**
 
 ## Getting Started
 ### Config info
