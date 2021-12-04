@@ -1,12 +1,43 @@
 package github.zerorooot.bean;
 
-import lombok.Data;
 
-@Data
 public class FileBean {
-    private String save_path;
     private String name;
-    private String state;
     private String content_path;
     private String id;
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getContent_path() {
+        return content_path;
+    }
+
+    public void setContent_path(String content_path) {
+        this.content_path = content_path;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "FileBean{" +
+                "name='" + name + '\'' +
+                ", content_path='" + content_path + '\'' +
+                ", id='" + id + '\'' +
+                '}';
+    }
 }

@@ -37,8 +37,14 @@ public class Main {
         ArrayList<FileBean> torrentsList = qBittorrentUtil.getTorrentsList(login);
         System.out.println("Download items : " + torrentsList.size());
         torrentsList.forEach(f -> {
-            String newPath = File.separator + path + File.separator + f.getName();
-            boolean b = new File(f.getContent_path()).renameTo(new File(newPath));
+            File oldFile = new File(f.getContent_path());
+            //Avoid the problem that the file name has no suffix caused by the difference between "f.getContent_path()" and
+            // "f.getName()"
+            if (oldFile.isFile()) {
+                f.setName(oldFile.getName());
+            }
+            String newPath = path + File.separator + f.getName();
+            boolean b = oldFile.renameTo(new File(newPath));
             System.out.println("remove " + f.getContent_path() + " to " + newPath + "  " + b);
             if (b) {
                 qBittorrentUtil.delete(f, login);
